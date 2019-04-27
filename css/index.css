@@ -128,3 +128,11 @@ h1 {
     margin-top: 85px;
     text-align: center;
 }
+
+.title{
+     text-align: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: orange;
+    font-size: 30px;
+}

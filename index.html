@@ -9,8 +9,9 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Main Menu</title>
+    <audio id="play" src="music/button.mp3"></audio>
 </head>
-<body>
+<body onclick="playSound()">
   <script>
     var audio, playbtn, mutebtn, seek_bar;
     function initAudioPlayer(){
