@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>1 Player Option</title>
+</head>
+<body>
+  <script>
+    var audio, playbtn, mutebtn, seek_bar;
+    function initAudioPlayer(){
+      audio = new Audio();
+      audio.src = "music/bsound.mp3";
+      audio.loop = true;
+      audio.play();
+      // Set object references
+      playbtn = document.getElementById("playpausebtn");
+      mutebtn = document.getElementById("mutebtn");
+      // Add Event Handling
+      playbtn.addEventListener("click",playPause);
+      mutebtn.addEventListener("click", mute);
+      // Functions
+      function playPause(){
+        if(audio.paused){
+            audio.play();
+          } else {
+            audio.pause();
+          }
+      }
+      function mute(){
+        if(audio.muted){
+            audio.muted = false;
+          } else {
+            audio.muted = true;
+          }
+      }
+    }
+    window.addEventListener("load", initAudioPlayer);
+    </script>
+  <div class="container">
+    <!-- header sections -->
+    <div class="header">
+      <h1><span>Tic Tac Toe</span></h1>
+    </div>
+    <!-- Main menu -->
+    <div class="menu">
+      <h3><a href="1playerEasy.html">Easy</a></h3>
+      <h3><a href="1playerHard.html">Hard</a></h3>
+    </div>
+    <div> <a id="playpausebtn"> <img src="audio.png" width="15%" height="15%"> </a> 
+   </div>
+    <!-- Audio -->
+    <!-- <embed src="music/bsound.mp3" loop="true" hidden="true" autostart="true"> -->
+  </div>
+</body>
+</html>

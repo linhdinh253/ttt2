@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Main Menu</title>
+</head>
+<body>
+  <script>
+    var audio, playbtn, mutebtn, seek_bar;
+    function initAudioPlayer(){
+      audio = new Audio();
+      audio.src = "music/bsound.mp3";
+      audio.loop = true;
+      audio.play();
+      // Set object references
+      playbtn = document.getElementById("playpausebtn");
+      mutebtn = document.getElementById("mutebtn");
+      // Add Event Handling
+      playbtn.addEventListener("click",playPause);
+      mutebtn.addEventListener("click", mute);
+      // Functions
+      function playPause(){
+        if(audio.paused){
+            audio.play();
+          } else {
+            audio.pause();
+          }
+      }
+      function mute(){
+        if(audio.muted){
+            audio.muted = false;
+          } else {
+            audio.muted = true;
+          }
+      }
+    }
+    window.addEventListener("load", initAudioPlayer);
+    </script>
+  <div class="container"><br><br><br>
+    <!-- header sections -->
+   
+    <!-- <a id="mutebtn"><img src="no-audio.png" width="10%" height="10%"></a> -->
+    <!-- <div class="header"> -->
+      <!-- <h1><span>Tic Tac Toe</span></h1> -->
+    <!-- </div> -->
+    <div> <a id="logo"> <img src="logo.png" width="120%" height="150%"></a>
+      <div>
+    <br>   
+    <!-- Main menu -->
+    <div class="menu" id="button-menu">
+      <h2><b><a href="option.html">1 PLAYER</a></b></h2>
+      <h2><b><a href="2player.html">2 PLAYERS</a></b></h2>
+    </div>
+    <br> <br>
+
+    <div> <a id="playpausebtn"> <img src="audio.png" width="15%" height="15%"> </a> 
+   </div>
+    <!-- Audio -->
+    <!-- <embed src="music/bsound.mp3" loop="true" hidden="true" autostart="true"> -->
+  </div>
+
+</body>
+</html>

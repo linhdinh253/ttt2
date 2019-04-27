@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Gameplay</title>
+         <audio id="play" src="music/button.mp3"></audio>
+    </head>
+    <body onclick="playSound()">
+        <table>
+            <tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+            </tr>
+        </table>
+
+        <div id="wrap">
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="option.html">1 Player</a></li>
+                    <li><a href="2player.html" id="active">2 Player</a></li>
+                </ul>  
+            </div>
+        </div>
+
+        <div class="endgame">
+            <div class="text"></div>
+            <button onClick="startGame()">Replay</button>
+        </div>
+
+        <!-- Audio -->
+        <embed src="music/bsound.mp3" loop="true" hidden="true" autostart="true">
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/2player.js"></script>
+    </body>
+</html>
